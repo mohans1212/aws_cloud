@@ -1,0 +1,22 @@
+body
+{
+	margin: 0px 0px;
+	background: black
+}
+
+.container
+{
+	background: blue;
+	padding:30px;
+	margin-top: 20%;
+
+	
+
+}
+.table
+{
+	background-color: #ffc109;
+	
+	height: 10px;
+	box-shadow: 18px 5px 10px 0.1px #000000;	
+}
