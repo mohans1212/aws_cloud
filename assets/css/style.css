@@ -1,0 +1,457 @@
+﻿/*=============================================================
+    Authour URL: www.designbootstrap.com
+    
+    http://www.designbootstrap.com/
+
+    License: MIT
+
+    http://opensource.org/licenses/MIT
+
+    100% Free To use For Personal And Commercial Use.
+
+    IN EXCHANGE JUST TELL PEOPLE ABOUT THIS WEBSITE
+   
+========================================================  */
+
+/*==============================
+GENERAL STYLES
+==============================*/
+
+@import url(http://fonts.googleapis.com/css?family=Anton|Maven+Pro:500,700);
+@font-face {
+    font-family: valentine_vibes;
+    src: url(../fonts/valentinevibes.ttf) format("truetype");
+    }
+
+body {
+    font-family: 'Maven Pro', sans-serif;
+    line-height: 25px;
+}
+
+.pad-bottom {
+    padding-bottom: 50px;
+}
+
+section {
+    padding-bottom: 120px;
+    padding-top: 100px;
+}
+
+.btn {
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+}
+
+.set-bk-clr {
+    background-color: #FF0000;
+}
+
+.clr-set {
+    /*color: #FF2276;*/
+}
+
+.f-big {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.set-bk-clr:hover {
+    background-color: rgba(107, 1, 41, 0.67);
+}
+/*==============================
+NAVBAR STYLES
+==============================*/
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+
+}
+.navbar-brand {
+padding:0px;
+
+}
+    .navbar-brand h1 {
+        height:50px;
+        color: #d9534f;
+    
+        
+
+
+    }
+.navbar-default .navbar-toggle {
+    border-color: #FFF;
+}
+
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #FFF;
+    }
+
+    .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-weight: 900;
+}
+
+    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+        color: #FF0000;
+        text-decoration: none;
+    }
+
+.navbar-default {
+    background-color: #000000;
+    border-color: transparent;
+}
+/* ADDED PADDING IN NAVBAR */
+.navbar {
+    padding: 15px;
+    -webkit-transition: background .8s ease-out,padding .8s ease-out;
+    -moz-transition: background .8s ease-out,padding .8s ease-out;
+    transition: background .8s ease-out,padding .8s ease-out;
+}
+/* CLASS FOR REMOVING PADDING IN NAVBAR*/
+.navbar-pad-original {
+    padding: 0px;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #FF0000;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+
+}
+
+
+/* =============================================================
+  HEADER SECTION STYLES
+ ============================================================ */
+
+#header {
+    background: url(../img/home.jpg) no-repeat center center;
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    
+  
+    
+}
+
+    #header .overlay {
+        background-color: rgba(3, 3, 3, 0.6);
+        min-height: 700px;
+    }
+
+    #header h1 {
+      line-height: 70px;
+      font-size: 45px;
+      font-weight: 400;
+      padding-top: 180px;
+      padding-bottom: 35px;
+      color: #ffffff;
+      font-family: valentine_vibes;
+    }
+
+
+    #header h4 {
+        line-height: 30px;
+        font-size: 15px;
+        padding-bottom: 40px;
+        text-transform: uppercase;
+    }
+    #header h3 {
+        line-height: 30px;
+        font-size: 13px;
+        padding-bottom: 40px;
+        text-transform: uppercase;
+    }
+
+/*================================
+    SKILLS STYLES
+==================================*/
+#services {
+    background-color: rgba(237, 237, 237, 1);
+}
+
+    #services i {
+        font-size: 80px;
+        padding: 30px;
+        color: #FF2276;
+    }
+
+    #services h4 {
+        padding-bottom: 5px;
+        padding-top: 15px;
+    }
+    #services i img
+    {
+        width: 80px;
+        height:80px;
+       
+    }
+/* =============================================================
+  EDUCATION SECTION STYLES
+ ============================================================ */
+
+#clients {
+    background-color: #FFF;
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;
+    background-attachment: fixed;
+}
+
+    #clients .overlay {
+        background-color: rgba(0,0,0,0.7);
+        padding-top: 90px;
+        min-height: 300px;
+        color: #fff;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+.clients-carousel {
+    margin-top: 50px; /*SMALL TOP MARGIN FOR SPACE */
+    padding: 0 30px 30px 30px;
+}
+
+    .clients-carousel .thumbnail {
+        border: 1px solid #FF2276;
+    }
+
+    .clients-carousel .carousel-control.left {
+        height: 30px;
+        width: 25px;
+        margin-top: 45px;
+        background: #FF2276;
+        left: -15px;
+    }
+
+    .clients-carousel .carousel-control.right {
+        height: 30px;
+        width: 25px;
+        margin-top: 45px;
+        background: #FF2276;
+        right: -15px;
+    }
+
+    .clients-carousel img {
+        width: 100%;
+        height: 120px;
+    }
+
+#clients .thumbnail {
+    background-color: transparent;
+}
+.timeline-event:first-child {
+  margin-top: 64px;
+}
+.timeline-event {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 64px;
+  margin-bottom: 32px;
+}
+.timeline-event:nth-child(even) .col-sm-6:first-child {
+  text-align: right;
+}
+.timeline-event .col-sm-6:first-child {
+  padding-right: 54px;
+}
+.timeline-event .col-sm-6:last-child {
+  padding-left: 54px;
+}
+.timeline-event:nth-child(odd) .col-sm-6:first-child {
+  padding-left: 54px;
+  padding-right: 15px;
+}
+.timeline-event:nth-child(odd) .col-sm-6:last-child {
+  padding-right: 54px;
+  text-align: right;
+  padding-left: 15px;
+}
+.timeline-event .middle {
+  position: absolute;
+  left: 50%;
+  width: 60px;
+  margin-left: -30px;
+  text-align: center;
+  height: 100%;
+}
+.timeline-event .middle i {
+  font-size: 40px;
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #e74c3c;
+}
+.timeline-event .middle .vertical-line {
+  top: 10px;
+  width: 2px;
+  height: 40%;
+  display: inline-block;
+  background: #e74c3c;
+  position: absolute;
+  left: 50%;
+  margin-left: -2px;
+}
+.timeline-event h2 {
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+@media all and (max-width: 767px) {
+  .timeline-event {
+    padding-bottom: 0;
+  }
+  .timeline-event .middle {
+    display: none;
+  }
+  .timeline-event .col-sm-6 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    text-align: left !important;
+  }
+}
+@media all and (max-width: 767px) {
+  .bottom-band {
+    display: block;
+    margin-top: 80px;
+  }
+  .bottom-band h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .fullscreen-element .align-vertical {
+    padding-top: 80px !important;
+  }
+}
+
+/*about me */
+
+#about_me
+{
+  text-align: justify;
+  font-size: 16px; 
+
+   
+}
+
+
+/* =============================================================
+ PORTFOLIO SECTION STYLES
+ ============================================================ */
+
+/* FOR CHANGING COLOR OF ACTIVE CATEGORY */
+.caegories a.active {
+    background-color: #FF2276;
+    border: 2px solid #FF2276;
+}
+
+/* FOR TRANSITION BEAUTIFULLY */
+.isotope .isotope-item {
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+
+#works .work-wrapper {
+    border: 2px solid #FF2276;
+    padding: 2px;
+    margin: 5px 5px 10px 5px;
+}
+
+#works .media img
+ {
+    filter: gray; /* FOR IE6-9 */
+    -webkit-filter: grayscale(1); /* FOR Google Chrome, Safari 6+ and  Opera 15+ */
+    opacity: 0.8;
+}
+
+    #works img:hover {
+        filter: none; /* FOR IE6-9 */
+        -webkit-filter: grayscale(0); /* FOR Google Chrome, Safari 6+ and  Opera 15+ */
+        opacity: 1;
+    }
+/* =============================================================
+  TESTIMONIAL SECTION STYLES
+ ============================================================ */
+#testimonial {
+    background: url(../img/testimonial.jpg) no-repeat center center;
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;
+    background-attachment: fixed;
+}
+
+    #testimonial .overlay {
+        background-color: rgba(0,0,0,0.7);
+        padding-top: 90px;
+        min-height: 300px;
+        color: #fff;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+/* =============================================================
+  TEAM SECTION STYLES
+ ============================================================ */
+#team {
+    background-color: rgba(237, 237, 237, 1);
+}
+
+.media img {
+    margin-right: 40px;
+    max-height: 150px;
+    margin-bottom: 20px;
+    border: 2px solid #FF0000;
+}
+
+    .media img:hover {
+        opacity: 0.6;
+    }
+/* =============================================================
+  CONTACT SECTION STYLES
+ ============================================================ */
+#contact {
+    background: url(../img/clients.jpg) no-repeat center center;
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;
+    background-attachment: fixed;
+}
+
+    #contact .overlay {
+        background-color: rgba(0,0,0,0.9);
+        padding-top: 90px;
+        min-height: 300px;
+        color: #fff;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+/* =============================================================
+  FOOTER SECTION STYLES
+ ============================================================ */
+footer {
+    padding: 20px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 900;
+    background-color: rgba(237, 237, 237, 1);
+}
+
+    footer a, footer a:hover {
+        color: #000;
+        text-decoration: none;
+    }
