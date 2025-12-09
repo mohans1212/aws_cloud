@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "mysite:${BUILD_NUMBER}"
-        CONTAINER_NAME = "Profile_${BUILD_NUMBER}"
+        IMAGE_NAME = "${BUILD_TAG}"
+        CONTAINER_NAME = "Profile"
     }
 
     stages {
