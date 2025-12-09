@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout'){
             steps{
-                git url:'https://github.com/mohans1212/aws_cloud'
+                git branch:'main' url:'https://github.com/mohans1212/aws_cloud'
             }
         }
         stage('BuildCont'){
