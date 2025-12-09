@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = 'mysite:v2'
-        CONTAINER_NAME = 'Profile2'
+        IMAGE_NAME = "mysite:${BUILD_NUMBER}"
+        CONTAINER_NAME = "Profile_${BUILD_NUMBER}"
     }
 
     stages {
@@ -17,9 +17,14 @@ pipeline {
                 sh "docker build -t ${IMAGE_NAME} ."
             }
         }
+        stage('deploy'){
+            steps{
+                sh "docker run -d --name ${CONTAINER_NAME} -p 8081:80 ${IMAGE_NAME}"
+            }
+        }
         stage('Print Env Vars') {
                 steps {
-                    sh 'printenv'
+                    sh 'printenv | sort'
                 }
             }
     }
