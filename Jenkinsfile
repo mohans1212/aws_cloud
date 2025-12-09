@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "${BUILD_TAG}"
+        IMAGE_NAME = "${BUILD_TAG}:${BUILD_ID}"
         CONTAINER_NAME = "Profile"
     }
 
@@ -24,10 +24,6 @@ pipeline {
                 sh "docker run -d --name ${CONTAINER_NAME} -p 8081:80 ${IMAGE_NAME}"
             }
         }
-        stage('Print Env Vars') {
-                steps {
-                    sh 'printenv | sort'
-                }
-            }
+        
     }
 }
