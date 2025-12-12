@@ -30,7 +30,7 @@ pipeline {
         withCredentials([usernamePassword(credentialsId: REG_CRED_ID, usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
           sh '''
             echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-            docker tag ${BUILD_TAG}:${BUILD_ID} mohancloud/one:${BUILD_TAG}
+            docker tag ${BUILD_TAG}:${BUILD_ID} mohancloud12/one:${BUILD_TAG}
             docker push mohancloud12/one:${BUILD_TAG}
             docker logout
           '''
