@@ -37,9 +37,7 @@ pipeline {
         }
         stage('Kubernetes Deployment') {
             steps {
-                sh 'kubectl set image deployment/metric-deploy cont=mohancloud12/one:${BUILD_TAG}'
+                sh "kubectl set image deployment/metric-deploy cont=mohancloud12/one:${BUILD_TAG}"
             }
-      }
-    }
-    }
+      }   
 }
