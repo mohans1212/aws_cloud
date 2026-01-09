@@ -34,6 +34,8 @@ pipeline {
             docker push mohancloud12/one:${BUILD_TAG}
             docker logout
           '''
+                }
+             }
         }
         stage('Kubernetes Deployment') {
             steps {
