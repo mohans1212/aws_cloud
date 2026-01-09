@@ -35,6 +35,10 @@ pipeline {
             docker logout
           '''
         }
+        stage('Kubernetes Deployment') {
+            steps {
+                sh 'kubectl set image deployment/metric-deploy cont=mohancloud12/one:${BUILD_TAG}'
+            }
       }
     }
     }
