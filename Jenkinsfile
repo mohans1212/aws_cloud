@@ -26,14 +26,14 @@ pipeline {
             }
         }
         stage('Push Image') {
-        steps {
-        withCredentials([usernamePassword(credentialsId: REG_CRED_ID, usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-          sh '''
-            echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-            docker tag ${BUILD_TAG}:${BUILD_ID} mohancloud12/one:${BUILD_TAG}
-            docker push mohancloud12/one:${BUILD_TAG}
-            docker logout
-          '''
+            steps {
+                withCredentials([usernamePassword(credentialsId: REG_CRED_ID, usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+                sh '''
+                    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                    docker tag ${BUILD_TAG}:${BUILD_ID} mohancloud12/one:${BUILD_TAG}
+                    docker push mohancloud12/one:${BUILD_TAG}
+                    docker logout
+                '''
                 }
              }
         }
@@ -41,5 +41,6 @@ pipeline {
             steps {
                 sh "kubectl set image deployment/metric-deploy cont=mohancloud12/one:${BUILD_TAG}"
             }
-      }   
+       }   
+  }   
 }
