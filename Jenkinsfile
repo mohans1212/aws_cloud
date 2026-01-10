@@ -1,12 +1,12 @@
 pipeline {
-    agent any
-
+    agent {
+        Label 'dev'
+    }
     environment {
         IMAGE_NAME = "${BUILD_TAG}:${BUILD_ID}"
         CONTAINER_NAME = "Profile"
         REG_CRED_ID = "dockerpass" 
     }
-
     stages {
         stage('Checkout'){
             steps{
@@ -37,10 +37,10 @@ pipeline {
                 }
              }
         }
-        stage('Kubernetes Deployment') {
-            steps {
-                sh "kubectl set image deployment/metric-deploy cont=mohancloud12/one:${BUILD_TAG}"
-            }
-       }   
+    //     stage('Kubernetes Deployment') {
+    //         steps {
+    //             sh "kubectl set image deployment/metric-deploy cont=mohancloud12/one:${BUILD_TAG}"
+    //         }
+    //    }   
   }   
 }
