@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        Label 'dev'
-    }
+    agent any
     environment {
         IMAGE_NAME = "${BUILD_TAG}:${BUILD_ID}"
         CONTAINER_NAME = "Profile"
