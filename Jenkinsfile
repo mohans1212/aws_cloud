@@ -39,8 +39,9 @@ pipeline {
             steps {
                 sh '''
 
-                  yq e ".spec.template.spec.containers[0].image = \"mohancloud12/one:${BUILD_TAG}\"" -i deployment.yml
-                  cat deployment.yml
+                    IMAGE="mohancloud12/one:${BUILD_TAG}"
+                    yq e ".spec.template.spec.containers[0].image = \\"${IMAGE}\\"" -i deployment.yml
+                    cat deployment.yml
                 '''
             }
         }
