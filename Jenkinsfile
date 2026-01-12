@@ -58,7 +58,7 @@ pipeline {
                       git config user.name "jenkins"
                       git config user.email "jenkins@ci"
 
-                      git add deployment.yml
+                      git add kubernetes/deployment.yml
                       git commit -m "test" || echo "No changes to commit"
 
                       git push https://${GIT_USER}:${GIT_PASS}@github.com/mohans1212/aws_cloud.git dev
