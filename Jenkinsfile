@@ -38,7 +38,7 @@ pipeline {
         stage('Update file') {
             steps {
                 sh '''
-                  yq e '.spec.template.spec.containers[0].image = "mohancloud12/one:${BUILD_TAG}"' -i deployment.yml
+                  yq e '.spec.template.spec.containers[0].image = "mohancloud12/one:"${BUILD_TAG}' -i deployment.yml
                 '''
             }
         }
