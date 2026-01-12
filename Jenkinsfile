@@ -35,7 +35,7 @@ pipeline {
                 }
              }
         }
-                stage('Update file') {
+        stage('Update file') {
             steps {
                 sh '''
                   sed -i 's/image:.*/image: mohancloud12/one:${BUILD_TAG}/' deployment.yml
@@ -61,7 +61,10 @@ pipeline {
                       git push https://${GIT_USER}:${GIT_PASS}@github.com/mohans1212/aws_cloud.git dev
                     '''
             }
-    //     stage('Kubernetes Deployment') {
+         
+          }
+        }
+    //  stage('Kubernetes Deployment') {
     //         steps {
     //             sh "kubectl set image deployment/metric-deploy cont=mohancloud12/one:${BUILD_TAG}"
     //         }
