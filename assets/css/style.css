@@ -142,8 +142,16 @@ padding:0px;
     -moz-background-size: cover;
     background-attachment: fixed;
     color: #fff;
-    
-  
+@font-face {
+  font-family: "Adelia";
+  src: url("fonts/Adelia.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}   
+
+.hero-text {
+  font-family: "Adelia", cursive;
+}
     
 }
 
