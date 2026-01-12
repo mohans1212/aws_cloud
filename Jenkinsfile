@@ -38,7 +38,7 @@ pipeline {
         stage('Update file') {
             steps {
                 sh '''
-                  sed -i 's/image:.*/image: mohancloud12/one:${BUILD_TAG}/' deployment.yml
+                  sed -i 's/image:.*/image: mohancloud12/one:1/' deployment.yml
                 '''
             }
         }
