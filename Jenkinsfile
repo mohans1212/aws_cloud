@@ -40,7 +40,7 @@ pipeline {
                 sh '''
 
                     IMAGE="mohancloud12/one:${BUILD_TAG}"
-                    yq e ".spec.template.spec.containers[0].image = \\"${IMAGE}\\"" -i deployment.yml
+                    yq e ".spec.template.spec.containers[0].image = \\"${IMAGE}\\"" -i kubernetes/deployment.yml
                     cat deployment.yml
                 '''
             }
