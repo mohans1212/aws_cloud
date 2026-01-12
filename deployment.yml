@@ -11,9 +11,9 @@ spec:
     spec:
       containers:
         - name: cont
-          image: mohansrikanth123
+          image: mohancloud12/one:${BUILD_TAG}
           ports:
-            - containerPort : 8080
+            - containerPort: 8080
   replicas: 4
   selector:
     matchLabels:
