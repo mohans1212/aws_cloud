@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: cont
-          image: mohancloud12/one:jenkins-kubernetes-7
+          image: mohancloud12/one:jenkins-kubernetes-10
           ports:
             - containerPort: 8080
   replicas: 4
