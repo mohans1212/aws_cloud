@@ -35,6 +35,32 @@ pipeline {
                 }
              }
         }
+                stage('Update file') {
+            steps {
+                sh '''
+                  sed -i 's/image:.*/image: mohancloud12/one:${BUILD_TAG}/' deployment.yml
+                '''
+            }
+        }
+        stage('Commit and Push Changes') {
+            steps {
+                withCredentials([
+                    usernamePassword(
+                        credentialsId: 'git-creds',
+                        usernameVariable: 'GIT_USER',
+                        passwordVariable: 'GIT_PASS'
+                    )
+                ]) {
+                    sh '''
+                      git config user.name "jenkins"
+                      git config user.email "jenkins@ci"
+
+                      git add deployment.yml
+                      git commit -m "test" || echo "No changes to commit"
+
+                      git push https://${GIT_USER}:${GIT_PASS}@github.com/mohans1212/aws_cloud.git dev
+                    '''
+            }
     //     stage('Kubernetes Deployment') {
     //         steps {
     //             sh "kubectl set image deployment/metric-deploy cont=mohancloud12/one:${BUILD_TAG}"
