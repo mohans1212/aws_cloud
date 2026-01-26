@@ -1,0 +1,20 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deploy
+spec:
+  template:
+    metadata:
+      labels:
+        app: test
+    spec:
+      containers:
+        - name: cont
+          image: mohancloud12/one:jenkins-kubernetes-19
+          ports:
+            - containerPort: 8080
+  replicas: 4
+  selector:
+    matchLabels:
+      app: test
